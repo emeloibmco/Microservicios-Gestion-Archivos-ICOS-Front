@@ -1,0 +1,22 @@
+.border-m{
+    border-radius: 25px;
+    border: 2px solid #0a0a0a;
+    padding: 20px;
+    width: 40%;
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+  
+  .main-1
+  {
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .btn-center-cj
+  {
+    position: absolute;
+    margin: 0 auto;
+  }
+  

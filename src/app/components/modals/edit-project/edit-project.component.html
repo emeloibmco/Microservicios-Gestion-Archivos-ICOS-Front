@@ -1,0 +1,30 @@
+<div class="modal-header">
+  <h4 class="modal-title">My Form</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="activeModal.dismiss('Cross click')"> <i class="fas fa-times-circle"></i>
+  </button>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="modal-boy">
+    <div class="container">
+      <div class="form-group">
+        <label for="nameProject">Nombre Proyecto</label>
+        <input type="text"
+          class="form-control"
+          formControlName="nameProject" />
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text"
+          class="form-control"
+          formControlName="description" />
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success"
+      [disabled]="!myForm.valid">
+      Submit Form
+    </button>
+  </div>
+</form>

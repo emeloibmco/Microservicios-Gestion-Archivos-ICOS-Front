@@ -1,0 +1,22 @@
+.center-sss{
+  text-align: center;
+  display:inline-block;
+}
+
+.nav a{
+  text-align: center;
+  align-content: center;
+  margin: 0 auto;
+}
+
+.big_container{
+  width: 98%;
+
+}
+
+.table-container{
+  margin: 0 auto;
+  width: 95%;
+
+}
+

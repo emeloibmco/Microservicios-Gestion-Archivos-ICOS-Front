@@ -1,0 +1,51 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+       <div class="big-container">
+        <nav class="navbar navbar-white bg-white justify-content-between center-sss">
+          <a class="navbar-brand">Papelera</a>
+        </nav>
+       <div class="card-body">
+          <!--table-bordered table-striped   table-sm-->
+          <div class="table-container">
+          <table class="table">
+            <thead class="">
+              <tr>
+                <th>Nombre</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let assettrash of queryservice.assettrash">
+                <td>{{ assettrash.name_asset }}</td>
+                <td>
+                  <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                    <button class="btn btn-primary" ngbDropdownToggle> </button>
+                      <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem (click)="restoreData(assettrash.name_asset,assettrash.id_asset)" ><i class="fas fa-trash-restore-alt" ></i> Recuperar</button>
+                        <button ngbDropdownItem (click)="deleteAsset(assettrash.id_asset,assettrash.name_asset)" ><i class="fas fa-trash"></i> Eliminar </button>
+                      </div>
+                    </div>
+                </td>
+            </tbody>
+          </table>
+          <nav>
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+          </div>
+       </div>
+          </div>
+      <!-- </div> -->
+      </div>
+    </div>
+  </div>
+</div>

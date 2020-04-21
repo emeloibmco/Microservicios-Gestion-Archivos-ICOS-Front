@@ -1,0 +1,28 @@
+.main-1
+{
+    padding: 50px;    
+}
+
+.container{
+  width: 50%;
+ 
+}
+
+.heading{
+    margin-bottom: 3%;
+}
+
+
+.pform {
+    max-width: 650px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  }
+  
+.form-row > .col, .form-row > [class*=col-] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+  
+  

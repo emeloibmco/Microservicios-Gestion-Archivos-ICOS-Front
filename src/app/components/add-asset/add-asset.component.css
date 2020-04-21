@@ -1,0 +1,46 @@
+.border-m{
+  border-radius: 25px;
+  border: 2px solid #0a0a0a;
+  padding: 20px;
+  width: 40%;
+  height: 60%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.main-1
+{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-2
+{
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.upload-file-1{
+  margin: 0 auto;
+  padding:20px 0;
+}
+
+.description-file{
+  padding:20px 0;
+  margin: 0 auto;
+}
+
+.submit-file{
+  padding:20px 0;
+  margin: 0 auto;
+}
+
+
