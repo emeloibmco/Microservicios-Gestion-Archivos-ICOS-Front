@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddProjectComponent implements OnInit {
 
   uploadForm: FormGroup;
-  SERVER_URL = 'http://localhost:3000/project';
+  SERVER_URL = 'http://controller-micro-icos-application.openshift-43-ea9753cca330b7f05a99ad5b2c8b5da1-0000.us-east.containers.appdomain.cloud/project';
 
   public form = {
     name_project: null,

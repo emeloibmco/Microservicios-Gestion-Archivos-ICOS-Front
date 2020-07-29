@@ -3,15 +3,17 @@
     border: 2px solid #0a0a0a;
     padding: 20px;
     width: 40%;
-    height: 60%;
+    height: 70%;
     margin: 0 auto;
     margin-top: 2%;
+    margin-bottom: 2%;
   }
   
   .main-1
   {
     text-align: center;
     margin: 0 auto;
+    
   }
   
   .btn-center-cj
@@ -20,3 +22,8 @@
     margin: 0 auto;
   }
   
+  .main{
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }

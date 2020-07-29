@@ -23,10 +23,12 @@ import { Location } from '@angular/common';
 export class AssetsComponent implements OnInit {
 
   public proyec = null;
-  private URL_DOWN = 'http://localhost:3000/docDownload/';
+  private URL_DOWN = 'http://controller-micro-icos-application.openshift-43-ea9753cca330b7f05a99ad5b2c8b5da1-0000.us-east.containers.appdomain.cloud/docDownload/';
 
   public formME;
   public urlDown;
+
+  filteredSearch1 = '';
 
   constructor(@Inject(DOCUMENT) private document: Document, public queryservice: QueryService,
     private modalService: NgbModal,

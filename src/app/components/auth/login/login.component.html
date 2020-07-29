@@ -1,0 +1,22 @@
+<main class="main-1">
+    <section class="portfolio-block hire-me">
+        <div class="container">
+            <div class="heading" style="text-align: center;">
+                <h2>INGRESO</h2>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="email">Usuario</label><input class="form-control" type="email" [(ngModel)]="form.mail" id="mail" name="mail">
+                    <label for="password">Contraseña</label><input class="form-control" type="password"  [(ngModel)]="form.password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <div class="button" style="text-align: center;"><button class="btn btn-outline-primary" type="submit" (click)="onSubmit($event)">Ingresar</button></div>
+                </div>
+                <div>
+                    <p>No tienes cuenta ? <a routerLink="/signup" >Registrate</a></p>
+                </div>
+            </form>
+            
+        </div>
+    </section>
+</main>

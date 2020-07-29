@@ -20,12 +20,15 @@ import { DeleteAssetComponent } from './components/modals/delete-asset/delete-as
 import { DeleteAllAssetComponent } from './components/modals/delete-all-asset/delete-all-asset.component';
 import { DownloadFileComponent } from './components/modals/download-file/download-file.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/auth/login/login.component';
 import { PruebaMultipleComponent } from './prueba-multiple/prueba-multiple.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { LoginService } from './services/login.service';
-import { SignupComponent } from './components/signup/signup.component';
+import { SignupComponent } from './components/auth/signup/signup.component';
+import { FilterSearchPipe } from './pipes/filter-search.pipe';
+import { FilterSearchAssetPipe } from './pipes/filter-search-asset.pipe';
 
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -45,6 +48,8 @@ import { SignupComponent } from './components/signup/signup.component';
     PruebaMultipleComponent,
     TagsComponent,
     SignupComponent,
+    FilterSearchPipe,
+    FilterSearchAssetPipe,
 
   ],
   imports: [
@@ -58,7 +63,7 @@ import { SignupComponent } from './components/signup/signup.component';
     MatSidenavModule,
     MatToolbarModule
   ],
-  providers: [LoginService],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
   entryComponents: [
     EditProjectComponent,

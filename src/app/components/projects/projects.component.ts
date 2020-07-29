@@ -16,7 +16,9 @@ import { DeleteProjectComponent } from '../modals/delete-project/delete-project.
 })
 export class ProjectsComponent implements OnInit {
 
-  private SERVER_URL = 'http://localhost:3000/project/';
+  private SERVER_URL = 'http://controller-micro-icos-application.openshift-43-ea9753cca330b7f05a99ad5b2c8b5da1-0000.us-east.containers.appdomain.cloud/project/';
+
+  filteredSearch = '';
 
   constructor(public queryservice: QueryService, public router: Router, private httpClient: HttpClient, private modalService: NgbModal) { }
 

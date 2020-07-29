@@ -6,11 +6,10 @@
           <i class="fa fa-align-justify"></i> Proyectos
         </div>-->
         <nav class="navbar navbar-white bg-white justify-content-between">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button type="submit" class="btn btn-outline-primary">Buscar</button>
-          </form>
-          <a class="navbar-brand">Proyectos</a>
+          <div class="form-group">
+            <input class="form-control mr-sm-2" type="text" [(ngModel)]="filteredSearch" name="filteredSearch" placeholder="Search" aria-label="Busqueda">
+          </div>
+            <a class="navbar-brand">Proyectos</a>
           <button type="button" class="btn btn-outline-primary" routerLink="/addProject"><i class="far fa-plus-square"></i></button>
         </nav>
         <div class="card-body">
@@ -25,7 +24,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let project of queryservice.project">
+              <tr *ngFor="let project of queryservice.project | filterSearch:filteredSearch">
                 <td>{{ project.id_project }}</td>
                 <td ><a [routerLink]="['/assets/', project.id_project]" > {{ project.name_project }}</a></td>
                 <td>{{ project.description }}</td>
