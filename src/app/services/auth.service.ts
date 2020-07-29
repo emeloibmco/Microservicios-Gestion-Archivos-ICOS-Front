@@ -20,9 +20,10 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
-  createUser(username: string, firstname: string, surname: string, password: string, email: string ){
+  createUser( username: string, firstname: string, surname: string, password: string, email: string ){
     const authData: AuthData = {
       serverUrl: this._url,
+      username: username,
       firstname: firstname,
       surname: surname,
       password: password,
