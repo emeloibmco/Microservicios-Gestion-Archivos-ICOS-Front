@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   SERVER_URL = 'http://controller-micro-icos-application.openshift-43-ea9753cca330b7f05a99ad5b2c8b5da1-0000.us-east.containers.appdomain.cloud/createuser';
 
   public form = {
-    username: null,
+    username:null,
     firstname: null,
     surname: null,
     mail: null,
@@ -33,7 +33,7 @@ export class SignupComponent implements OnInit {
 
   public onSubmit() {
     
-    this.authService.createUser(this.form.username, this.form.firstname, this.form.surname, this.form.password, this.form.mail);
+    this.authService.createUser( this.form.username, this.form.firstname, this.form.surname, this.form.password, this.form.mail);
     this.router.navigate(['/login']);
   }
 

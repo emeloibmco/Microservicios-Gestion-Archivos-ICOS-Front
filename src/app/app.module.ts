@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule} from '@angular/material/sidenav';
 import { MatToolbarModule} from '@angular/material/toolbar';
@@ -29,6 +29,7 @@ import { FilterSearchPipe } from './pipes/filter-search.pipe';
 import { FilterSearchAssetPipe } from './pipes/filter-search-asset.pipe';
 
 import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService} from './services/token-interceptor.service'
 
 @NgModule({
   declarations: [
@@ -63,7 +64,13 @@ import { AuthGuard } from './auth.guard';
     MatSidenavModule,
     MatToolbarModule
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [
     EditProjectComponent,

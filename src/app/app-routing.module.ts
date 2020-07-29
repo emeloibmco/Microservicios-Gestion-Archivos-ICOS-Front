@@ -13,19 +13,19 @@ import { AuthGuard} from './auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: 'projects', component: ProjectsComponent, canActivate: [AuthGuard]
+    path: 'projects', component: ProjectsComponent
   },
   {
-    path: 'assets/:id', component: AssetsComponent, canActivate: [AuthGuard]
+    path: 'assets/:id', component: AssetsComponent
   },
   {
-    path: 'addAsset/:id', component: AddAssetComponent, canActivate: [AuthGuard]
+    path: 'addAsset/:id', component: AddAssetComponent
   },
   {
-    path: 'addProject', component: AddProjectComponent, canActivate: [AuthGuard]
+    path: 'addProject', component: AddProjectComponent
   },
   {
-    path: 'trash/:id', component: TrashComponent, canActivate: [AuthGuard]
+    path: 'trash/:id', component: TrashComponent
   },
   {
     path: 'signup', component: SignupComponent
